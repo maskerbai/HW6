@@ -1,18 +1,20 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="displayRecipes" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="displayRecipes" MasterPageFile="~/MasterPage.master" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+
     <p>
         <br />
     </p>
     <p>
         &nbsp;</p>
-    <form id="form1" runat="server">
+    
     <div>
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Recipes Table %>" SelectCommand="SELECT * FROM [Table]"></asp:SqlDataSource>
@@ -39,6 +41,7 @@
         </asp:GridView>
     
     </div>
-    </form>
-</body>
-</html>
+ 
+
+    </asp:Content>
+
