@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="DetailviewRecipes.aspx.vb" Inherits="DetailviewRecipes" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="NewDetailviewRecipes.aspx.vb" Inherits="DetailviewRecipes" %>
 
 <!DOCTYPE html>
 
@@ -41,7 +41,7 @@
                 <asp:Parameter Name="recipeID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="recipeID" DataSourceID="SqlDataSource1" Height="50px" Width="301px">
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="recipeID" DataSourceID="SqlDataSource1" Height="50px" Width="301px" DefaultMode="Insert">
             <Fields>
                 <asp:BoundField DataField="recipeName" HeaderText="Recipe Name " SortExpression="recipeName">
                 <FooterStyle HorizontalAlign="Right" />
@@ -73,7 +73,10 @@
                 <asp:BoundField DataField="notes" HeaderText="Notes " SortExpression="notes">
                 <HeaderStyle HorizontalAlign="Right" />
                 </asp:BoundField>
-                <asp:CommandField NewText="New Recipe" ShowInsertButton="True" />
+                <asp:CommandField ButtonType="Button" ShowInsertButton="True">
+                <FooterStyle HorizontalAlign="Center" />
+                <ItemStyle HorizontalAlign="Center" />
+                </asp:CommandField>
             </Fields>
         </asp:DetailsView>
     

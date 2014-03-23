@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="gridviewRecipes.aspx.vb" Inherits="displayRecipes" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="default.aspx.vb" Inherits="displayRecipes" %>
 
 <!DOCTYPE html>
 
@@ -7,6 +7,11 @@
     <title></title>
 </head>
 <body>
+    <p>
+        <br />
+    </p>
+    <p>
+        &nbsp;</p>
     <form id="form1" runat="server">
     <div>
     
