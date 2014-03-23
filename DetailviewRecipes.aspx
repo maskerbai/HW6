@@ -1,14 +1,9 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="DetailviewRecipes.aspx.vb" Inherits="DetailviewRecipes" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="DetailviewRecipes.aspx.vb" Inherits="DetailviewRecipes" MasterPageFile="~/MasterPage.master" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Recipes Table %>" DeleteCommand="DELETE FROM [Table] WHERE [recipeID] = @recipeID" InsertCommand="INSERT INTO [Table] ([recipeName], [submitby], [ing#1], [ing#2], [ing#3], [ing#4], [ing#5], [preparation], [notes]) VALUES (@recipeName, @submitby, @column1, @column2, @column3, @column4, @column5, @preparation, @notes)" SelectCommand="SELECT * FROM [Table] WHERE ([recipeID] = @recipeID)" UpdateCommand="UPDATE [Table] SET [recipeName] = @recipeName, [submitby] = @submitby, [ing#1] = @column1, [ing#2] = @column2, [ing#3] = @column3, [ing#4] = @column4, [ing#5] = @column5, [preparation] = @preparation, [notes] = @notes WHERE [recipeID] = @recipeID">
             <DeleteParameters>
@@ -77,7 +72,4 @@
             </Fields>
         </asp:DetailsView>
     
-    </div>
-    </form>
-</body>
-</html>
+   </asp:Content>
